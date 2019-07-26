@@ -1,5 +1,5 @@
 package com.kodilla.testing.forum;
 
 public class ForumTestSuite {
-    //test5
+    //test6
 }
