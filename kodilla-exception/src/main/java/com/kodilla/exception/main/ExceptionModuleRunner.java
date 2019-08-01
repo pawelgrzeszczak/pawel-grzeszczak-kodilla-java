@@ -23,10 +23,5 @@ public class ExceptionModuleRunner {
             System.out.println("Problem while reading a file!");
         }
 
-        SecondChallenge secondChallenge = new SecondChallenge();
-
-        String s = secondChallenge.probablyIWillThrowException(2, 1);
-        System.out.println("Result: " + s);
-
     }
 }
