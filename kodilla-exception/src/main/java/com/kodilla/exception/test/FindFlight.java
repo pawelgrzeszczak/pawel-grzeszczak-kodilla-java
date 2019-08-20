@@ -10,38 +10,14 @@ public class FindFlight {
 
         flights.put("Warszawa", true);
         flights.put("Radom", true);
-        //flights.put("Kielce", false);
+        flights.put("Kielce", false);
 
-        for(Map.Entry<String, Boolean> entry : flights.entrySet()) {
+        //System.out.println("Istnieje lot do ?: " + flights.containsKey(flight.getArrivalAirport()));
 
-//            if(entry.getKey() == flight.getDepartureAirport()) {
-//                System.out.println("Odlot mozliwy z: " + entry.getKey());
-//            } else {
-//                System.out.println("##Odlot niemozliwy z: " + entry.getKey());
-//                throw new RouteNotFoundException("Object doesn't exist");
-//            }
-//
-//            if(entry.getKey() == flight.getArrivalAirport()) {
-//                System.out.println("Przylot mozliwy z: " + entry.getKey());
-//            } else {
-//                System.out.println("##Przylot niemozliwy z: " + entry.getKey());
-//                throw new RouteNotFoundException("Object doesn't exist");
-//            }
-
-
-            if(entry.getKey() == flight.getDepartureAirport()) {
-                System.out.println("Odlot mozliwy z: " + entry.getKey());
-                break;
-            }
-            if(entry.getKey() == flight.getArrivalAirport()) {
-                System.out.println("Przylot mozliwy z: " + entry.getKey());
-                break;
-
-            } else {
-                System.out.println("##Lotnisko nie istnieje z: " + entry.getKey());
-                throw new RouteNotFoundException("Object doesn't exist");
-            }
-            //System.out.println("Flights: " + entry.getKey() + " Is possible?: " + entry.getValue());
+        if (flights.containsKey(flight.getArrivalAirport())) {
+            System.out.println("Przylot mozliwy z: " + flight.getArrivalAirport());
+        } else {
+            throw new RouteNotFoundException("Object doesn't exist");
         }
     }
 }
