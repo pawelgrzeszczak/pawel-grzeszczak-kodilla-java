@@ -31,6 +31,9 @@ public class SandStorageTestSuite {
     public void testGetSandBeansQuantityWithReduce() {
         //Given
         List<SandStorage> continents = new ArrayList<>();
+//        Europe europe = new Europe();
+//        SandStorage europe = new Europe();
+//        continents.add(europe);
         continents.add(new Europe());
         continents.add(new Asia());
         continents.add(new Africa());
@@ -38,6 +41,7 @@ public class SandStorageTestSuite {
         //When
         BigDecimal totalSand = continents.stream()
                 .map(SandStorage::getSandBeansQuantity)
+//                .map(continent -> continent.getSandBeansQuantity())
                 .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
 
         //Then
