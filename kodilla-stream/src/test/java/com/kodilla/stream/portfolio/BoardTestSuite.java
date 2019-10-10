@@ -3,18 +3,12 @@ package com.kodilla.stream.portfolio;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.time.Duration;
 import java.time.LocalDate;
-import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.DoubleStream;
-import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
-import static java.util.concurrent.TimeUnit.DAYS;
 import static java.util.stream.Collectors.toList;
 
 public class BoardTestSuite {
