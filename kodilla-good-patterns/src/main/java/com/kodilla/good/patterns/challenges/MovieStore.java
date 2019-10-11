@@ -34,9 +34,15 @@ public class MovieStore {
 
         MovieStore movieStore = new MovieStore();
 
-        System.out.println(movieStore.getMovies().entrySet().stream()
+        String theResultStringOfMovieStore = movieStore.getMovies().entrySet().stream()
+                .flatMap(e -> e.getValue().stream())
+                .collect(Collectors.joining(" ! ","<< ", " >>"));
+
+        System.out.println(theResultStringOfMovieStore);
+
+/*        System.out.println(movieStore.getMovies().entrySet().stream()
                 .flatMap(entry -> entry.getValue().stream())
-                .collect(Collectors.joining(" ! ")));
+                .collect(Collectors.joining(" ! ")));*/
 
     }
 }

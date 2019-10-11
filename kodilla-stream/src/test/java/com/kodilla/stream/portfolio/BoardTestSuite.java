@@ -162,6 +162,16 @@ public class BoardTestSuite {
 //                .flatMap(tl -> tl.getTasks().stream())
 //                .count();
 
+        // rozwiazanie w jednym streamie
+/*        double listOfTaskInProgress2 = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .map(t -> ChronoUnit.DAYS.between(t.getCreated(), LocalDate.now()))
+                .mapToLong(n -> n)
+                .average()
+                .getAsDouble();*/
+
+
 
 //        System.out.println(" Ilosc dni: " + listOfTaskInProgress);
 //        System.out.println(" ilosc zadan: " + counter);
