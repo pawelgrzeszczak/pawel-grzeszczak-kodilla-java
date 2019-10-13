@@ -17,7 +17,9 @@ public class SampleOrder {
 
         LocalDateTime sampleOrderDate = LocalDateTime.now();
 
-          ExtraFoodShop distributor = new ExtraFoodShop();
+        String distributor = "ExtraFoodShop";
+
+//          ExtraFoodShop distributor = new ExtraFoodShop();
 //        GlutenFreeShop distributor = new GlutenFreeShop();
 //        HealthyShop distributor = new HealthyShop();
 

@@ -8,9 +8,9 @@ public class OrderRequest {
     private User user;
     private Product product;
     private LocalDateTime orderDate;
-    private FoodDistributors distributor;
+    private String distributor;
 
-    public OrderRequest(User user, Product product, LocalDateTime orderDate, FoodDistributors distributor) {
+    public OrderRequest(User user, Product product, LocalDateTime orderDate, String distributor) {
         this.user = user;
         this.product = product;
         this.orderDate = orderDate;
@@ -29,7 +29,7 @@ public class OrderRequest {
         return orderDate;
     }
 
-    public FoodDistributors getDistributor() {
+    public String getDistributor() {
         return distributor;
     }
 }
