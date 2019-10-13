@@ -10,15 +10,15 @@ public class FoodOrderService {
     }
 
     public FoodDistributors getDistributor(OrderRequest orderRequest) {
-        if (orderRequest.getDistributor() == "ExtraFoodShop") {
+        if (orderRequest.getDistributor().equals("ExtraFoodShop")) {
             ExtraFoodShop extraFoodShop = new ExtraFoodShop();
             return extraFoodShop;
         }
-        if (orderRequest.getDistributor() == "GlutenFreeShop") {
+        if (orderRequest.getDistributor().equals("GlutenFreeShop")) {
             ExtraFoodShop extraFoodShop = new ExtraFoodShop();
             return extraFoodShop;
         }
-        if (orderRequest.getDistributor() == "HealthyShop") {
+        if (orderRequest.getDistributor().equals("HealthyShop")) {
             ExtraFoodShop extraFoodShop = new ExtraFoodShop();
             return extraFoodShop;
         }
