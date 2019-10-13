@@ -1,14 +1,20 @@
 package com.kodilla.good.patterns.Food2Door;
 
-import com.kodilla.good.patterns.Food2Door.FoodDistributors.FoodDistributors;
+import com.kodilla.good.patterns.Food2Door.FoodDistributors.ExtraFoodShop;
+import com.kodilla.good.patterns.Food2Door.FoodDistributors.GlutenFreeShop;
+import com.kodilla.good.patterns.Food2Door.FoodDistributors.HealthyShop;
 
 public class Application {
     public static void main(String[] args) {
         SampleOrder sampleOrder = new SampleOrder();
         OrderRequest orderRequest = sampleOrder.createSampleOrder();
 
-        FoodOrderService foodOrderService = new FoodOrderService(new FoodDistributors());
-        //foodOrderService.
+        ExtraFoodShop extraFoodShop = new ExtraFoodShop();
+        extraFoodShop.process(orderRequest);
+        GlutenFreeShop glutenFreeShop = new GlutenFreeShop();
+        glutenFreeShop.process(orderRequest);
+        HealthyShop healthyShop = new HealthyShop();
+        healthyShop.process(orderRequest);
     }
 }
 
