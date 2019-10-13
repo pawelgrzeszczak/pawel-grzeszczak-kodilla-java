@@ -1,5 +1,7 @@
 package com.kodilla.good.patterns.Food2Door;
 
+import com.kodilla.good.patterns.Food2Door.FoodDistributors.ExtraFoodShop;
+
 import java.time.LocalDateTime;
 
 public class SampleOrder {
@@ -15,6 +17,10 @@ public class SampleOrder {
 
         LocalDateTime sampleOrderDate = LocalDateTime.now();
 
-        return new OrderRequest(sampleUser, sampleProduct1, sampleOrderDate);
+          ExtraFoodShop distributor = new ExtraFoodShop();
+//        GlutenFreeShop distributor = new GlutenFreeShop();
+//        HealthyShop distributor = new HealthyShop();
+
+        return new OrderRequest(sampleUser, sampleProduct1, sampleOrderDate, distributor);
     }
 }

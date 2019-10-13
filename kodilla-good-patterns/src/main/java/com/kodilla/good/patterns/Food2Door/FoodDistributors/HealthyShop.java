@@ -8,7 +8,7 @@ public class HealthyShop implements FoodDistributors {
     @Override
     public void process(OrderRequest orderRequest) {
         System.out.println(name + " dziękuje za zakupy");
-        System.out.println(orderRequest.getUser().getName() + orderRequest.getUser().getSurname() + " zamówiłeś: x"
+        System.out.println(orderRequest.getUser().getName() + " " + orderRequest.getUser().getSurname() + " zamówiłeś: x"
                 + orderRequest.getProduct().getQuantity() + " " + orderRequest.getProduct().getProductName() + "\n");
     }
 }
