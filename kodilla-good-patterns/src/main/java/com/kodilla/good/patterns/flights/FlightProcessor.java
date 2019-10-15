@@ -1,7 +1,8 @@
-package com.kodilla.good.patterns.loty;
+package com.kodilla.good.patterns.flights;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
@@ -26,10 +27,17 @@ public class FlightProcessor {
     }
 
     List<Flight> findFlightWithTransfer(Airport airportFrom, Airport airportTransfer, Airport airportTo) {
-        return flights.getFlightsList().stream()
-                .filter(flightFrom -> flightFrom.getFrom().equals(airportFrom))
-//                .filter(transfer -> transfer.getFrom().equals(airportTransfer))
-//                .filter(flightTo -> flightTo.getTo().equals(airportTo))
-                .collect(Collectors.toList());
+       List<Flight> flightsFrom = findFlightFrom(airportFrom);
+       List<Flight> flightsTransfer = flightsFrom.stream()
+               .filter(ft -> ft.getTo().equals(airportTransfer))
+               .collect(toList());
+
+       List<Flight> flightsTo = findFlightFrom(airportTransfer).stream()
+               .filter(f -> f.getTo().equals(airportTo))
+               .collect(toList());
+
+       return Stream.of(flightsTransfer, flightsTo)
+               .flatMap(lists -> lists.stream())
+               .collect(toList());
     }
 }

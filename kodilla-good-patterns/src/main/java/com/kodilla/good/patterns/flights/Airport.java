@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.loty;
+package com.kodilla.good.patterns.flights;
 
 import java.util.Objects;
 
