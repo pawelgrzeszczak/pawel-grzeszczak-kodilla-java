@@ -1,16 +1,18 @@
-package com.kodilla.good.patterns.Food2Door;
+package com.kodilla.good.patterns.food2door;
 
 import java.time.LocalDateTime;
 
-public class Order {
+public class OrderRequest {
     private User user;
     private Product product;
     private LocalDateTime orderDate;
+    private String distributor;
 
-    public Order(User user, Product product, LocalDateTime orderDate) {
+    public OrderRequest(User user, Product product, LocalDateTime orderDate, String distributor) {
         this.user = user;
         this.product = product;
         this.orderDate = orderDate;
+        this.distributor = distributor;
     }
 
     public User getUser() {
@@ -24,4 +26,9 @@ public class Order {
     public LocalDateTime getOrderDate() {
         return orderDate;
     }
+
+    public String getDistributor() {
+        return distributor;
+    }
 }
+

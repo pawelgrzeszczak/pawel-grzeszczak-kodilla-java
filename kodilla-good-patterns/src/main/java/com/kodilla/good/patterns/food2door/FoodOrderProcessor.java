@@ -1,7 +1,7 @@
-package com.kodilla.good.patterns.Food2Door;
+package com.kodilla.good.patterns.food2door;
 
-import com.kodilla.good.patterns.Food2Door.FoodDistributors.ExtraFoodShop;
-import com.kodilla.good.patterns.Food2Door.FoodDistributors.FoodDistributors;
+import com.kodilla.good.patterns.food2door.fooddistributors.ExtraFoodShop;
+import com.kodilla.good.patterns.food2door.fooddistributors.FoodDistributors;
 
 public class FoodOrderProcessor {
 

@@ -1,6 +1,6 @@
-package com.kodilla.good.patterns.Food2Door.FoodDistributors;
+package com.kodilla.good.patterns.food2door.fooddistributors;
 
-import com.kodilla.good.patterns.Food2Door.OrderRequest;
+import com.kodilla.good.patterns.food2door.OrderRequest;
 
 public class GlutenFreeShop implements FoodDistributors {
     private String name = "GlutenFreeShop";
