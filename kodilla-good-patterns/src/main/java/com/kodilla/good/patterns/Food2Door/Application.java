@@ -5,7 +5,7 @@ public class Application {
         SampleOrder sampleOrder = new SampleOrder();
         OrderRequest orderRequest = sampleOrder.createSampleOrder();
 
-        FoodOrderService foodOrderService = new FoodOrderService();
-        foodOrderService.process(orderRequest);
+        FoodOrderProcessor foodOrderProcessor = new FoodOrderProcessor();
+        foodOrderProcessor.process(orderRequest);
     }
 }

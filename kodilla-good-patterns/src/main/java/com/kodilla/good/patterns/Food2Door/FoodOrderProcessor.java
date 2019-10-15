@@ -3,7 +3,7 @@ package com.kodilla.good.patterns.Food2Door;
 import com.kodilla.good.patterns.Food2Door.FoodDistributors.ExtraFoodShop;
 import com.kodilla.good.patterns.Food2Door.FoodDistributors.FoodDistributors;
 
-public class FoodOrderService {
+public class FoodOrderProcessor {
 
     public void process(OrderRequest orderRequest) {
         getDistributor(orderRequest).process(orderRequest);

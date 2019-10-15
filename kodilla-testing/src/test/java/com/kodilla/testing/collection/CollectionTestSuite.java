@@ -55,7 +55,12 @@ public class CollectionTestSuite {
         normalList.add(10);
 
         ArrayList<Integer> normalList2 = new ArrayList<>();
+        normalList2.add(0);
+        normalList2.add(2);
         normalList2.add(4);
+        normalList2.add(6);
+        normalList2.add(8);
+        normalList2.add(10);
         //When
         List<Integer> result = oddNumbersExterminator.exterminate(normalList);
         System.out.println("Testing normal ArrayList");
