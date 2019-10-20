@@ -13,7 +13,6 @@ public class BoardTestSuite {
     @Test
     public void testBeansExist() {
         //Given
-//        ApplicationContext contex = new AnnotationConfigApplicationContext(BoardConfig.class);
         ApplicationContext contex = new AnnotationConfigApplicationContext("com.kodilla.spring.portfolio");
 
         //When
