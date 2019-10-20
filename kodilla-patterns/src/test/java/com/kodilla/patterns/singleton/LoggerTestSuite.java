@@ -9,15 +9,17 @@ public class LoggerTestSuite {
 
     @BeforeClass
     public static void createLog() {
-        logger = new Logger();
-        logger.log("logs logs logs");
+        Logger.getInstance().log("logs logs logs");
+//        logger = new Logger();
+//        logger.log("logs logs logs");
     }
 
     @Test
     public void getLastLog() {
         //Given
         //When
-        String logName = logger.getLastLog();
+//        String logName = logger.getLastLog();
+        String logName = Logger.getInstance().getLastLog();
         System.out.println("Last log: " + logName);
         //Then
         Assert.assertEquals("logs logs logs", logName);
