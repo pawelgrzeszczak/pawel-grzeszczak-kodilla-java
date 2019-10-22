@@ -6,7 +6,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class BoardTestSuite {
 
@@ -27,19 +26,10 @@ public class BoardTestSuite {
         System.out.println("Bean taskInProgressList was found in the container: " + taskInProgressListExists);
         System.out.println("Bean taskDoneList was found in the container: " + taskDoneListExists);
 
-    }
-
-    @Test
-    public void testContext() {
-        //Given
-        ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.kodilla.spring.portfolio");
-
-        //When & Then
-        System.out.println("===== Beans list: ==== >>");
-        Arrays.stream(context.getBeanDefinitionNames())
-                .forEach(System.out::println);
-        System.out.println("<< ===== Beans list ====");
+        Assert.assertTrue(boardExists);
+        Assert.assertTrue(taskToDoListExists);
+        Assert.assertTrue(taskInProgressListExists);
+        Assert.assertTrue(taskDoneListExists);
     }
 
     @Test
