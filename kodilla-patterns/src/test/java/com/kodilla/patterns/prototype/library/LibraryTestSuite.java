@@ -24,9 +24,6 @@ public class LibraryTestSuite {
             System.out.println(e);
         }
 
-        System.out.println(library);
-        System.out.println(clonedLibrary);
-
         Library deepClonedLibrary = null;
         try {
             deepClonedLibrary = library.deepCopy();
@@ -35,12 +32,16 @@ public class LibraryTestSuite {
             System.out.println(e);
         }
 
-        System.out.println(deepClonedLibrary);
-
         //When
+        library.getBooks().clear();
         //Then
-        Assert.assertEquals(5, library.getBooks().size());
-        Assert.assertEquals(5, clonedLibrary.getBooks().size());
+        System.out.println(library);
+        System.out.println(clonedLibrary);
+        System.out.println(deepClonedLibrary);
+        Assert.assertEquals(0, library.getBooks().size());
+        Assert.assertEquals(0, clonedLibrary.getBooks().size());
         Assert.assertEquals(5, deepClonedLibrary.getBooks().size());
+        Assert.assertEquals(clonedLibrary.getBooks(), library.getBooks());
+        Assert.assertNotEquals(deepClonedLibrary.getBooks(), library.getBooks());
     }
 }
