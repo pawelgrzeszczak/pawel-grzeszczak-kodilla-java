@@ -34,6 +34,10 @@ public class InvoiceDaoTestSuite {
         Item item2 = new Item(product2, new BigDecimal("5000"), 3);
         Item item3 = new Item(product3, new BigDecimal("16700"), 1);
 
+        product1.getItems().add(item1);
+        product2.getItems().add(item2);
+        product3.getItems().add(item3);
+
         Invoice invoice1 = new Invoice("Faktura1/11/2019");
         invoice1.setItems(Arrays.asList(item1, item2, item3));
 
