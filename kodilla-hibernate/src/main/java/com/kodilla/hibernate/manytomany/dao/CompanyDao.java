@@ -13,4 +13,6 @@ public interface CompanyDao extends CrudRepository<Company, Integer> {
 
     List<Company> findByThreeCharsPrefix(@Param("PREFIX") String prefix);
 
+    List<Company> findByName(@Param("ARG") String arg);
+
 }
