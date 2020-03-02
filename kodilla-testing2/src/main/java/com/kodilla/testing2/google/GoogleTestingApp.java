@@ -7,13 +7,16 @@ import org.openqa.selenium.WebElement;
 
 public class GoogleTestingApp {
 //    public static final String SEARCHFIELD = "lst-ib";
-    public static final String SEARCHFIELD = "sb_form_q";
+//    public static final String SEARCHFIELD = "sb_form_q";
+    public static final String SEARCHFIELD = "q";
 
     public static void main(String[] args) {
         WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
-        driver.get("https://www.bing.com");
+//        driver.get("https://www.bing.com");
+        driver.get("https://www.google.com");
 
-        WebElement searchField = driver.findElement(By.id(SEARCHFIELD));
+//        WebElement searchField = driver.findElement(By.id(SEARCHFIELD));
+        WebElement searchField = driver.findElement(By.name(SEARCHFIELD));
         searchField.sendKeys("Kodilla");
         searchField.submit();
 
